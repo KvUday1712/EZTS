@@ -11,7 +11,7 @@ def login():
     uname = input("Enter username: ")
     upass = input("Enter password: ")
     name = input("Enter name: ")
-    phno = input("Enter phone number: ")
+    phno = int(input("Enter phone number: "))
     
     users[uname] = upass
     
