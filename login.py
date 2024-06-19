@@ -5,26 +5,31 @@ user name and passwrd should be stored.
 with the rgistred details login success otherwise repeat the login processsaying that its invalid'''
 
 def login():
-    d=[]
-    print("welcome to reg")
-    uname=input("enter user name")
-    upass=input("enter the passwd")
-    name=input("enter name")
-    phno=input("enter phno")
+    users = {}  
+    print("Welcome to registration")
     
-    d[uname]=upass
+    uname = input("Enter username: ")
+    upass = input("Enter password: ")
+    name = input("Enter name: ")
+    phno = input("Enter phone number: ")
+    
+    users[uname] = upass
+    
     while True:
-        print("welcm to login")
-        iname=input("enter user login")
-        ipass=input("enter login passwd")
-        if iname in d:
-            if d[iname]==ipass:
-                print("login success")
+        print("Welcome to login")
+        iname = input("Enter username: ")
+        ipass = input("Enter password: ")
+        
+        if iname in users:
+            if users[iname] == ipass:
+                print("Login successful")
                 break
             else:
-                print("enter valid passcode")
+                print("Invalid password, please try again")
         else:
-            print("user not found")
+            print("User not found, please try again")
             break
+login()
+
      
     
